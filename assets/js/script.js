@@ -1,7 +1,7 @@
 'use strict'
 
 // スムーススクロール
-// headerの高さを取得し、headeHeightに代入
+// headerの高さを取得し、headerHeightに代入
 const headerHeight = document.querySelector('#header').offsetHeight;
 
 //querySelectorAllメソッドを使用してページ内のhref属性が#で始まるものを選択

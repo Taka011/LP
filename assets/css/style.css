@@ -32,7 +32,6 @@
 body {
     width: 100%;
     max-width: 100%;
-    /* font-family: new-atten, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", dnp-shuei-gothic-kin-std, sans-serif; */
     -webkit-text-size-adjust: 100%;
     font-family: Yu Gothic, "游ゴシック体", "游ゴシック", "Yu Gothic", "Noto Sans JP", sans-serif;
     background: #fff;
@@ -67,7 +66,7 @@ summary {
     width: 70%;
     padding: 10px 0;
     border-radius: 50px;
-    margin: 100px auto;
+    margin: 50px auto;
     text-align: center;
     position: relative;
     transition: all 0.5s;
@@ -90,9 +89,10 @@ summary {
     animation-fill-mode: forwards;
     opacity: 0;
 }
-.loof {
+
+.roof {
     position: relative;
-    top: 1.7rem;
+    top: 1.6rem;
 }
 .bottom {
     width: 100%;
@@ -177,7 +177,7 @@ summary {
     left: 5rem;
 }
 .mv__text__list__item {
-    font-size: 32px;
+    font-size: 1.5rem;
     text-align: left;
     margin-bottom: 20px;
     z-index: 10;
@@ -191,7 +191,7 @@ summary {
     position: relative;
     width: 100%;
     height: 100%;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
 }
 #top video {
     height: 100%;
@@ -223,19 +223,52 @@ summary {
     margin-bottom: 200px;
     opacity: 0;
 }
-#concept img {
-    height: 300px;
+.concept__img {
     width: 100%;
-    object-position: top 20px;
+    object-position: bottom;
     object-fit: cover;
 }
 .concept__title {
     margin: 20px 0;
 }
+.concept__img {
+    filter: contrast(0.8);
+    object-position: left;
+}
+.concept__list {
+    margin-top: 20px;
+    padding: 16px;
+    position: relative;
+} 
+.concept__list__ac{
+    content: "";
+    background: #8EACCD;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    font-size: 0.8rem;
+    position: absolute;
+    padding: 30px 16px;
+    top: 0;
+    left: -10px;
+    border-radius: 50%;
+}
+
+.concept__list__item {
+    padding: 16px 0;
+    border-bottom: 1px dotted #8EACCD;
+}
+.concept__list__item:first-of-type {
+    margin-top: 80px;
+}
 .fadeIn__inner {
     font-weight: 500;
-    line-height: 2;
-    font-size: 0.95rem;
+    line-height: 1.5;
+    font-size: 0.96rem;
+    margin-bottom: 20px;
+}
+.fa-check {
+    margin-right: 10px;
 }
 #about {
     padding: 30px 0;
@@ -244,7 +277,10 @@ summary {
     color: #fff;
     background: #8EACCD;
 }
-#about img {
+#about .fadeIn__inner:last-of-type {
+    font-size: 0.8rem;
+}
+.about__img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -260,21 +296,19 @@ summary {
 #product {
     position: relative;
     overflow: hidden;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
     opacity: 0;
     animation-delay: 0.6s;
     background: #fff;
 }
-#product img {
+.product__img {
     width: 100%;
     height: 300px;
     object-fit: cover;
     position: relative;
+    object-position: left;
 }
-#product img::before {
-    content: "";
-    position: absolute;
-}
+
 .product__title {
     margin: 20px 0;
 }
@@ -287,11 +321,12 @@ summary {
     opacity: 0;
     animation-delay: 0.8s;
 }
-#faq img {
+.faq__img {
     height: 300px;
     width: 100%;
     padding: 20px 0;
     object-fit: cover;
+    object-position: left;
 }
 .accordionBtn {
     position: relative;
