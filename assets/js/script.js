@@ -20,7 +20,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     //取得した要素の位置を取得するために、getBoundingClientRect()を呼び出し、ページ上の位置を計算。
     //headerの高さを引いて、スクロール位置がヘッダーの下になるように調整します。
-    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
 
     // window.scrollTo()を呼び出して、スクロール位置を設定します。behaviorオプションをsmoothに設定することで、スムーズなスクロールを実現します。
     window.scrollTo ({
@@ -49,16 +49,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   // ハンバーガーメニュークリックイベント
   function Menu() {
 
+    document.querySelectorAll('a[href^="#"]').forEach(elm => {
+      elm.addEventListener('click', () => {
+        mvList.classList.remove('active');
+      })
+    })
+
     let hamburger = document.querySelector('.hamburger');
     let mvList = document.querySelector('.mv__text__list');
-    let mvItem = document.querySelector('.mv__text__list__item a[href^="#"]');
-  
+    
     hamburger.addEventListener('click', ()=> {
       mvList.classList.toggle('active');
-    })
-  
-    mvItem.addEventListener('click', ()=> {
-      mvList.classList.remove('active');
     })
   }
   
