@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 200px;
+        fill: #1b90cd;
+        text-anchor: middle;
+        font-family: UDMarugo_LargePr6N-DB, "FOT-UDMarugo_Large Pr6N";
+      }
+    </style>
+  </defs>
+  <text id="S" class="cls-1" x="290" y="376"><tspan x="290">S</tspan></text>
+</svg>

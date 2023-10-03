@@ -289,7 +289,7 @@ summary {
     border: 1px solid #fff;
 }
 #about .cta:hover {
-    color: #000;
+    color: #8EACCD;
     background-color: #fff;
 }
 .about__img {
@@ -362,7 +362,6 @@ summary {
     height: 300px;
     width: 100%;
     object-fit: cover;
-    filter: contrast(0.8);
     border-radius: 6px;
 }
 .faq__inner {
@@ -384,15 +383,7 @@ summary {
     line-height: 1.5;
     opacity: 1;
 }
-.faq__title {
-    font-weight: 600;
-    font-size: 24px;
-    overflow: hidden;
-    white-space: nowrap;
-    /* animation: loop-left 20000ms linear paused infinite;
-    animation-play-state: running; */
-    padding: 20px 0;
-}
+
 #footer {
     width: 100%;
     height: 100%;

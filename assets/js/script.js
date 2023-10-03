@@ -49,17 +49,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   // ハンバーガーメニュークリックイベント
   function Menu() {
 
-    document.querySelectorAll('a[href^="#"]').forEach(elm => {
-      elm.addEventListener('click', () => {
-        mvList.classList.remove('active');
-      })
-    })
+    const hamburger = document.querySelector('.hamburger');
+    const mvList = document.querySelector('.mv__text__list');
+    const list = document.querySelectorAll('.mv__text__list__item a');
 
-    let hamburger = document.querySelector('.hamburger');
-    let mvList = document.querySelector('.mv__text__list');
-    
     hamburger.addEventListener('click', ()=> {
       mvList.classList.toggle('active');
+    })
+
+    list.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        mvList.classList.remove('active');
+      })
     })
   }
   
@@ -68,6 +71,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   // アコーディオンメニュー
   const faq = document.querySelectorAll('.js-ac');
   const dts = document.querySelectorAll('dt');
+  
     function Toggle() {
       const content = this.nextElementSibling;
       this.classList.toggle('open');
